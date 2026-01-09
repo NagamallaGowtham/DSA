@@ -13,9 +13,11 @@ var merge = function(nums1, m, nums2, n) {
     let p1 = m - 1;
     let p2 = n - 1;
 
-    for (let i = m + n - 1; i >= 0; i--) {
-        if (p2 < 0) return;
-        
+    for (let i = (m + n - 1); i >= 0; i--) {
+        if (p2 < 0) {
+            return nums1;
+        }
+
         if ((p1 >= 0) && (nums1[p1] > nums2[p2])) {
             nums1[i] = nums1[p1];
             p1--;
@@ -24,4 +26,15 @@ var merge = function(nums1, m, nums2, n) {
             p2--;
         }
     }
+
+    return nums1;
 };
+
+let numbers1 = [1, 2, 3, 0, 0, 0]
+let ms = 3;
+let numbers2 = [2, 5, 6];
+let ns = 3;
+
+let result = merge(numbers1, ms, numbers2, ns);
+
+console.log(result);
