@@ -144,3 +144,68 @@ for (let i = 0; i < n; i++) {
     }
     console.log(row);
 }
+
+/* 
+    *****
+     ***
+      *
+ */
+
+for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < n; j++) {
+        if (j < i || j >= (n - i)) {
+            row = row + " ";
+        } else {
+            row = row + "*";
+        }
+    }
+    console.log(row);
+}
+/* 
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *
+ */
+
+// based on above condition 
+
+for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < n; j++) {
+        if (j < i) {
+            row = row + " ";
+        } else {
+            row = row + " *";
+        }
+    }
+    console.log(row);
+}
+
+/* 
+ * * * * *
+  * * * *
+   * * *
+    * *
+     *
+ */
+
+// without space at starting and ending series 
+
+for (let i = 0; i < n; i++) {
+    let row = "";
+    for (let j = 0; j < n; j++) {
+        if (j < i) {
+            row = row + " ";
+        } else {
+            if (j == n - 1) {
+                row = row + "*";
+            } else {
+                row = row + "* ";
+            }
+        }
+    }
+    console.log(row);
+}
