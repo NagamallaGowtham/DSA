@@ -1,4 +1,4 @@
-let array = [54, 10, 55, 17, 44, 2, 99];
+let array = [54, 10, 55, 17, 99, 2, 99];
 
 function secondLargest(arr) {
     let first = -Infinity; // 10, 55
@@ -8,7 +8,7 @@ function secondLargest(arr) {
         if (arr[i] > first) {
             second = first;
             first = arr[i];
-        } else if (arr[i] > second) {
+        } else if (arr[i] > second && arr[i] !== first) {
             second = arr[i];
         }
     }
